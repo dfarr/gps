@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>xpgs</title>
+   <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAASveZAKDchy8aE-6K6klrVRTwM0brOpm-All5BF6PoaKBxRWWERS4kZrUi1p4QOZXGVxTLHvCXsg94A"
+          type="text/javascript"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+  function load() {
+    if (GBrowserIsCompatible()) {
+      var baseIcon = new GIcon();
+      baseIcon.shadow = "http://labs.google.com/ridefinder/images/mm_20_shadow.png"
+      baseIcon.iconSize = new GSize(12, 20);
+      baseIcon.shadowSize = new GSize(22, 20);
+      baseIcon.iconAnchor = new GPoint(6, 20);
+      baseIcon.infoWindowAnchor = new GPoint(5, 1);
+      var icons = [new GIcon(baseIcon),new GIcon(baseIcon),new GIcon(baseIcon)];
+      icons[0].image = "http://labs.google.com/ridefinder/images/mm_20_red.png";
+      icons[1].image = "http://labs.google.com/ridefinder/images/mm_20_blue.png";
+      icons[2].image = "http://labs.google.com/ridefinder/images/mm_20_green.png";
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GSmallMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(50.739695, -1.288052), 10);
+      var p = new GLatLng(50.807175, -1.283957);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.773515, -1.292622);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.767843, -1.297786);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.743464, -1.288716);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.733184, -1.282455);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.725851, -1.281785);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.718946, -1.285464);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.714602, -1.287664);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.708686, -1.289783);
+      map.addOverlay(new GMarker(p));
+      var p = new GLatLng(50.703685, -1.290288);
+      map.addOverlay(new GMarker(p));
+      var points = [];
+      points.push(new GLatLng(50.807175, -1.283957));
+      points.push(new GLatLng(50.773515, -1.292622));
+      points.push(new GLatLng(50.767843, -1.297786));
+      points.push(new GLatLng(50.743464, -1.288716));
+      points.push(new GLatLng(50.733184, -1.282455));
+      points.push(new GLatLng(50.725851, -1.281785));
+      points.push(new GLatLng(50.718946, -1.285464));
+      points.push(new GLatLng(50.714602, -1.287664));
+      points.push(new GLatLng(50.708686, -1.289783));
+      points.push(new GLatLng(50.703685, -1.290288));
+      map.addOverlay(new GPolyline(points,"#00ff00"));
+    }
+  }
+  //]]>
+  </script>
+ </head>
+ <body onload="load()" onunload="GUnload()">
+  <div id="content">
+	<h1>hello world</h1>
+	<div id="map"></div>
+  </div>
+ </body>
+</html>

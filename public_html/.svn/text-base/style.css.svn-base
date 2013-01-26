@@ -1,0 +1,14 @@
+body {
+	background:#FFEBCD;
+}
+
+#content {
+	text-align:center;
+	margin:0 auto 0 auto;
+	width: 800px;
+}
+
+#map {
+	width: 800px;
+	height: 500px;
+}
